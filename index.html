@@ -2,13 +2,13 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>学习网页 · 第 4 步</title>
+  <title>学习网页 · 第 5 步</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <p>学习网页</p>
-  <h1>第 4 步：把本地存档同步到 GitHub</h1>
-  <p>这一步只回答一个问题：怎样把电脑上的版本记录同步到远程仓库。</p>
+  <h1>第 5 步：把学习网页发布到公网</h1>
+  <p>这一步把 GitHub 上的网页放到云服务器，让浏览器通过公网地址访问。</p>
   <p>给其他 AI 看的进度在同目录 <code>AGENTS.md</code>。</p>
 
   <div class="path">
@@ -19,11 +19,11 @@
   </div>
 
   <div class="edit">
-    <p>首次同步和修改文字后的再次同步已完成。接下来用自己的话讲清 commit 与 push 的区别。</p>
+    <p>GitHub 同步已完成。当前准备云服务器，之后用 Nginx 提供这个网页。</p>
     <p id="my-line">我会用 commit 保存本地版本，再用 push 同步到 GitHub。</p>
   </div>
 
-  <h2>现在这个文件夹里有三个文件</h2>
+  <h2>网页代码分成三个文件</h2>
   <ul>
     <li><code>index.html</code> 只管结构，以及下面这两行引用。</li>
     <li><code>style.css</code> 只管样子。改颜色只打开它。</li>
@@ -36,18 +36,18 @@
     <li>看清路径：文件在哪，浏览器从哪把它拿出来。</li>
     <li>把页面拆成结构、样式、行为。</li>
     <li>用 Git 给这一页留下可以回退的存档。</li>
-    <li class="now">把本地存档同步到 GitHub。当前在这里。</li>
+    <li>把本地存档同步到 GitHub。</li>
+    <li class="now">把静态网页放到公网上，让别人也能打开。当前在这里。</li>
     <li>页面变大、难维护之后，再引入现代前端。</li>
     <li>要做功能时，补上 API 和后端。</li>
     <li>数据要留下来：先文件，再数据库，再认出同一个人。</li>
-    <li>放到公网上，让别人也能打开。</li>
   </ol>
 
   <h2>这一步带走</h2>
   <ul>
-    <li>本地仓库在电脑里，远程仓库在 GitHub 上。</li>
-    <li><code>remote</code> 保存远程仓库的地址。</li>
-    <li><code>push</code> 把本地提交同步到远程仓库。</li>
+    <li>GitHub 保存代码与版本记录，服务器运行网页服务。</li>
+    <li>Nginx 接收浏览器的请求，返回 HTML、CSS 和 JavaScript 文件。</li>
+    <li>发布更新要经过本地 push、服务器 pull，再把网页文件放入网站目录。</li>
   </ul>
 
   <script src="script.js"></script>
