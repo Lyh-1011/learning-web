@@ -42,7 +42,7 @@
 
 更新日期：2026-10-10。
 
-2026-10-10，模块 3.3 的本地操作已完成，学员确认理解；模块 3.4 进行中，公开空仓库 Lyh-1011/learning-web 已核验，本机公钥已登记，SSH 实测认证为 Lyh-1011 成功，待关联远程并推送。目前未配置远程，尚未推送；本地页面视觉结果和 3.2 的 link 解释未回查。
+2026-10-10，模块 3.3 的本地操作已完成，学员确认理解；模块 3.4 进行中，公开仓库 Lyh-1011/learning-web 已关联，学员亲手完成首次推送，远程 main 与本地提交一致，远程文件列表和首页源码已回读核验。待学员亲手改一处文字、刷新、提交并再次推送，讲清 commit 与 push 的区别；本地页面视觉结果和 3.2 的 link 解释未回查。
 
 页面标题是「学习网页 · 第 4 步」。
 
@@ -54,9 +54,13 @@
 
 Git 已安装，实测版本 `2.56.0.windows.2`。本目录的仓库分支是 `main`；全局提交身份已按学员提供的名字和邮箱配置。`.gitignore` 忽略 `.DS_Store`、`Thumbs.db`、`Desktop.ini`。第一次提交是 `2897860`「第一次提交：保存学习网页和学习进度」；学员亲手完成第二次提交 `42be690`「修改首页标题文案」，仅替换了 `<h1>` 中的标题文字。两次提交和提交后的干净工作区已实测，学员确认理解 status、add、commit。
 
-3.4 已读原课。按原课主线执行，命令适配 Windows。GitHub 连接器读到当前账号 `Lyh-1011`；学员选择仓库名 `learning-web`，可见性 Public。学员先创建了 `Lyh-2001011`，随后按自己确认的选择改名为 `learning-web`。截图与 GitHub 回读均确认实际仓库为 `Lyh-1011/learning-web`，ID `1412853497`，Public，仍为空仓库。下一动作是测试现有 SSH 配置，再配置本地远程地址。
+3.4 已读原课。按原课主线执行，命令适配 Windows。GitHub 连接器读到当前账号 `Lyh-1011`；学员选择仓库名 `learning-web`，可见性 Public。学员先创建了 `Lyh-2001011`，随后按自己确认的选择改名为 `learning-web`。截图与 GitHub 回读均确认实际仓库为 `Lyh-1011/learning-web`，ID `1412853497`，Public。创建时未初始化 README、许可证或忽略规则，首次推送前为空仓库。
 
-默认 SSH 公钥已由学员登记为账号认证密钥 Lyh-1，截图指纹与本机公钥一致。此前主机身份确认后公钥遭拒，账号原始公钥列表曾为 []；登记后实测 ssh -T 返回 Hi Lyh-1011! You've successfully authenticated, but GitHub does not provide shell access.，证明 SSH 身份认证已成功。GitHub 此项测试正常退出码为 1，不按此码误判认证失败。未读取私钥、未覆盖已有密钥。下一动作让学员亲手重新执行 ssh -T 核对输出，再学习 remote add origin、remote -v，关联 git@github.com:Lyh-1011/learning-web.git。当前未配置 remote，尚未 push；关联后进行第一次推送并回读远程提交。
+默认 SSH 公钥已由学员登记为账号认证密钥 Lyh-1，截图指纹与本机公钥一致。此前主机身份确认后公钥遭拒，账号原始公钥列表曾为 []；登记后助手和学员均实测 ssh -T 返回 Hi Lyh-1011! You've successfully authenticated, but GitHub does not provide shell access.，证明 SSH 身份认证已成功。GitHub 此项测试正常退出码为 1，不按此码误判认证失败。未读取私钥、未覆盖已有密钥。
+
+学员亲手执行 remote add origin、remote -v 和 push -u origin main，远程 origin 的地址为 git@github.com:Lyh-1011/learning-web.git；本地 main 已跟踪 origin/main。首次推送回读到远程 main 的提交为 f7746d17af60351569402937fbe72a898ec64876，与当时本地 HEAD 完全一致；远程文件列表包含 .gitignore、AGENTS.md、CLAUDE.md、index.html、script.js、style.css，首页源码已通过 GitHub 回读。首次同步后工作区干净。
+
+本节余下手改：学员用记事本打开 index.html，只修改 id="my-line" 的段落文字，保存并在本地浏览器刷新。建议改为「我会用 commit 保存本地版本，再用 push 同步到 GitHub。」；先用 git diff 核对改动，再亲手 add、commit、push，最后核对 GitHub 文件内容。学员还需用自己的话讲清 commit 与 push 的区别，未完成前不称整节完成。
 
 浏览器工具在前一轮拒绝自动打开本地 `file:///` 地址；本地页面的刷新和视觉结果待学员在自己的浏览器里核对。3.2 的 link 口头解释未回查。学员确认理解 3.3 并明确点名 3.4，因此继续当前章节，不把未回查事项写成已验收。
 
@@ -73,7 +77,7 @@ Git 已安装，实测版本 `2.56.0.windows.2`。本目录的仓库分支是 `m
 - 3.1 HTML。结果已有。不另做课件那张卡片。
 - 3.2 拆成三个文件。背景色手改已做，口头解释待补。
 - 3.3 Git 本地存档。学员亲手完成第二次提交并确认理解，本地操作已核验；页面视觉结果未回查。
-- 3.4 GitHub 与远程同步。公开空仓库已创建并核验，SSH、关联远程和推送待完成。
+- 3.4 GitHub 与远程同步。SSH、关联远程和首次推送已完成并回读核验，亲手改文字、再次提交推送和口头解释待验收。
 - 3.5 把静态页发布到公网。
 - 4.1–4.6 模块化、Vite 与 npm、React、数据驱动、Next.js、再发布。等页面真的难维护再进入。
 - 5.1–5.5 什么是 API、安装 Python、手搓 HTTP、FastAPI、前后端联调与 CORS。
