@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>学习网页 · 第 3 步</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>学习网页</p>
+  <h1>第 3 步：用 Git 存档</h1>
+  <p>这一步只回答一个问题：怎样给当前网页留下可以回看、比较和回退的版本。</p>
+  <p>给其他 AI 看的进度在同目录 <code>AGENTS.md</code>。</p>
+
+  <div class="path">
+    <p>磁盘路径。这是 Windows 保存文件的位置，写在文件里，不会变。</p>
+    <p><code id="disk-path">E:\Projects\NEW\index.html</code></p>
+    <p>浏览器地址。这是浏览器拿到这份文件之后，自己填进下面这一行的。</p>
+    <p><code id="browser-url">如果刷新后这里还是这句话，说明 script.js 没有跑。</code></p>
+  </div>
+
+  <div class="edit">
+    <p>亲手把上方标题的“用 Git 存档”改成“给学习网页留下存档”，保存，刷新，然后完成第二次提交。</p>
+    <p id="my-line">保存并刷新后能看到页面变化；完成 commit 后才会增加一条 Git 记录。</p>
+  </div>
+
+  <h2>现在这个文件夹里有三个文件</h2>
+  <ul>
+    <li><code>index.html</code> 只管结构，以及下面这两行引用。</li>
+    <li><code>style.css</code> 只管样子。改颜色只打开它。</li>
+    <li><code>script.js</code> 只管行为。地址栏那一行是它填上的。</li>
+  </ul>
+
+  <h2>八步路线</h2>
+  <ol start="0">
+    <li>浏览器打开磁盘上的一个文件。</li>
+    <li>看清路径：文件在哪，浏览器从哪把它拿出来。</li>
+    <li>把页面拆成结构、样式、行为。</li>
+    <li class="now">用 Git 给这一页留下可以回退的存档。当前在这里。</li>
+    <li>页面变大、难维护之后，再引入现代前端。</li>
+    <li>要做功能时，补上 API 和后端。</li>
+    <li>数据要留下来：先文件，再数据库，再认出同一个人。</li>
+    <li>放到公网上，让别人也能打开。</li>
+  </ol>
+
+  <h2>这一步带走</h2>
+  <ul>
+    <li><code>git status</code> 查看哪些文件变了、哪些已暂存。</li>
+    <li><code>git add</code> 选择要放入下一次提交的文件内容。</li>
+    <li><code>git commit</code> 把暂存的内容记成一个版本，并写下说明。</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

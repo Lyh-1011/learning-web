@@ -1,0 +1,20 @@
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.7;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #1a1a1a;
+  background: #fff3d6;
+}
+code { font-size: 0.95em; }
+.now { font-weight: 700; }
+.edit {
+  border: 1px dashed #888;
+  padding: 0.75rem 1rem;
+}
+.path {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
