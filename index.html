@@ -47,7 +47,7 @@
   <ul>
     <li>GitHub 保存代码与版本记录，服务器运行网页服务。</li>
     <li>这台服务器上的 Caddy 接收浏览器的请求，按域名找到网站，再返回网页文件或转交给后端程序。</li>
-    <li>发布更新要经过本地 push、服务器 pull，再把网页文件放入网站目录。</li>
+    <li>本地 commit 保存版本，push 推送到 GitHub；服务器每分钟自动检查 main，拉取并发布有变化的网页文件。</li>
   </ul>
 
   <script src="script.js"></script>
