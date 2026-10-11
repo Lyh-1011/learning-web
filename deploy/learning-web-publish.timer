@@ -1,0 +1,11 @@
+[Unit]
+Description=Check GitHub for learning-web updates every minute
+
+[Timer]
+OnActiveSec=5s
+OnUnitInactiveSec=60s
+AccuracySec=1s
+Unit=learning-web-publish.service
+
+[Install]
+WantedBy=timers.target
